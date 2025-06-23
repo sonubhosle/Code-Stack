@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.flex{
+    display: flex;
+}
+
+.items-center{
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}

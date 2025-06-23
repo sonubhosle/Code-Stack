@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+.carousel {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+ .carousel .banner_image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+ .carousel .banner_image img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: top center;
+}
+
+.carousel .banner_image .banner_content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    z-index: 999;
+}
+
+.banner_content .left_content {
+    width: 60%;
+    height: 400px;
+    position: relative;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-left: 40px; 
+    gap: 20px; 
+    text-align: left;
+  }
+
+  .banner_content .left_content h1{
+    color: #004461;
+    font-size: 3.6vw;
+    line-height: 40px;    
+  }
+  .banner_content .left_content span{
+    color: #483AA0;
+    font-size: 3vw;
+  }
+
+  .banner_content .left_content  p{
+    color: #292929;
+    font-size: 15px;
+  }
+
+  .banner_content .left_content .animated-button {
+    text-transform: uppercase;
+    background-color: #483AA0;
+    font-weight: 500;
+    color: #fff;
+    width: 170px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    border-radius: 4px;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(71, 58, 160, 0.603) 5px 5px 15px 0px;
+    animation: changeBg 8s linear infinite;
+
+  }
+  
+  .animated-button .button-1,
+  .animated-button .button-2 {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    opacity: 0;
+    border-radius: 4px;
+  }
+  
+  /* Animation 1 */
+  .animated-button .button-1 {
+    animation: slideInOut1 8s linear infinite;
+  }
+  
+  /* Animation 2 with delay */
+  .animated-button .button-2 {
+    animation: slideInOut2 8s linear infinite;
+  }
+  
+  @keyframes changeBg {
+      0% {
+        background-color: #483AA0;
+        box-shadow: rgba(71, 58, 160, 0.603) 5px 5px 15px 0px;
+
+      }
+      10% {
+        background-color: #5d4fb4;
+        box-shadow: rgba(92, 79, 180, 0.603) 5px 5px 15px 0px;
+
+      }
+      40% {
+        background-color: crimson;
+        box-shadow: rgba(220, 20, 60, 0.603) 5px 5px 15px 0px;
+      }
+      50% {
+       background-color: rgb(228, 51, 87) ;
+       box-shadow: rgba(228, 51, 86, 0.603) 5px 5px 15px 0px;
+
+      }
+      100% {
+       background-color: #483AA0;
+       box-shadow: rgba(71, 58, 160, 0.603) 5px 5px 15px 0px;
+
+      }
+  }
+  
+  /* KEYFRAMES */
+  @keyframes slideInOut1 {
+    0% {
+      left: -200px;
+      opacity: 0;
+    }
+    10% {
+      left: 0px;
+      opacity: 1;
+    }
+    40% {
+      left: 0px;
+      opacity: 1;
+    }
+    50% {
+      left: 200px;
+      opacity: 0;
+    }
+    100% {
+      left: 200px;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideInOut2 {
+    0% {
+      left: -200px;
+      opacity: 0;
+    }
+    50% {
+      left: -200px;
+      opacity: 0;
+    }
+    60% {
+      left: 0px;
+      opacity: 1;
+    }
+    90% {
+      left: 0px;
+      opacity: 1;
+    }
+    100% {
+      left: 200px;
+      opacity: 0;
+    }
+  }
+  
+.banner_content .right_content{
+    width: 40%;
+    height: 100%;
+    position: relative;
+}

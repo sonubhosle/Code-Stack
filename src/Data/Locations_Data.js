@@ -1,0 +1,67 @@
+export const location_data = [
+    {
+        "id": 1,
+        "image": "https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Destination-Image-10-1.jpg",
+        "title": "Vinales Valley",
+        "location": "Cuba",
+        "time": "3 Days 4 Nights",
+        "price": 999,
+    },
+    {
+        "id": 2,
+        "image": "https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Destination-Image-09-1.jpg",
+        "title": "National Capitol of Cuba",
+        "location": "Cuba",
+       "time": "3 Days 4 Nights",
+        "price": 1999,
+    },
+    {
+        "id": 3,
+        "image": "https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Destination-Image-05-1.jpg",
+        "title": "Louvre Museum",
+        "location": "Belguim, Paris",
+       "time": "3 Days 4 Nights",
+        "price": 999,
+    },
+    {
+        "id": 4,
+        "image": "https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Destination-Image-08-1.jpg",
+        "title": "Franz Josef Glacier",
+        "location": "New Zeland",
+       "time": "3 Days 4 Nights",
+        "price": 999,
+    },
+    {
+        "id": 5,
+        "image": "https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Destination-Image-07-1.jpg",
+        "title": "Milford Sound Piopiotahi",
+        "location": "New Zeland",
+       "time": "3 Days 4 Nights",
+        "price": 1299,
+    },
+    {
+        "id": 6,
+        "image": "https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Destination-Image-06.png",
+        "title": "Cathedrale de Paris",
+        "location": "Paris",
+       "time": "3 Days 4 Nights",
+        "price": 2999,
+    },
+    {
+        "id": 7,
+        "image": "https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Destination-Image-05-1.jpg",
+        "title": "Louvre Museum",
+        "location": "Belguim, Paris",
+       "time": "3 Days 4 Nights",
+        "price": 999,
+    },
+    {
+        "id": 8,
+        "image": "https://www.turio-wp.egenslab.com/wp-content/uploads/2022/07/Destination-Image-06.png",
+        "title": "Cathedrale de Paris",
+        "location": "Paris",
+       "time": "3 Days 4 Nights",
+        "price": 2999,
+    }
+
+]
