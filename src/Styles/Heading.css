@@ -1,0 +1,24 @@
+.heading_section {
+    margin: 30px 0px 20px 0px;
+
+}
+
+.heading_section .sm_heading{
+    font-size: 27px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color-2) !important;
+}
+
+.heading_section .sm_heading .icon_heading{
+    display: flex;
+    align-items: center;
+    font-size: 30px !important;
+}
+
+ .heading_section p{
+    font-size: 17px;
+    color: var(--text-color);
+}

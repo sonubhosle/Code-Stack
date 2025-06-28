@@ -13,3 +13,53 @@
 a{
     text-decoration: none;
 }
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --text-color-2:#6f63be;
+    --bg-btn-2:#6f63be;
+    --bg-profile:#ccc;
+    --bg-skills:#fff;
+    --text-color-light:#444;
+    --bg-color-2: #6f63be;
+    --bg-status-success:teal;
+    --bg-status-warning:crimson;
+    --color-status-success:#fff;
+    --color-status-warning:#fff;
+    --border:#f3f4f6;
+    --footer-bg:#f8f8f8;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #121212;
+    --bg-color-2: #B13BFF;
+    --text-color: #ffffff;
+    --text-color-2:#B13BFF;
+    --bg-btn-2:#B13BFF;
+    --bg-profile:rgba(255, 255, 255, 0.13);
+    --bg-skills:rgba(255, 255, 255, 0.13);
+    --text-color-light:#b1b1b1;
+    --bg-status-success:rgba(0, 128, 128, 0.274);
+    --color-status-success:teal;
+    --bg-status-warning: rgba(220, 20, 60, 0.274);
+    --color-status-warning:crimson;
+    --border:none;
+    --footer-bg:rgba(255, 255, 255, 0.13);
+  }
+
+
+
+button.theme-toggle {
+    background-color:rgba(65, 65, 65, 0.192);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    color: var(--text-color-2);
+    margin-right: 25px;
+  }

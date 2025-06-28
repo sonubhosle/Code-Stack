@@ -1,115 +1,119 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../Styles/Header.css'
-import { TbBrandFacebookFilled } from "react-icons/tb";
-import { RiInstagramFill } from "react-icons/ri";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { FaTwitter } from "react-icons/fa";
-import { Link, useNavigate } from 'react-router-dom'
+
+import { Link, useNavigate,useLocation } from 'react-router-dom'
 import { MdOutlinePhonelinkRing } from "react-icons/md";
-import { AiOutlineMail } from "react-icons/ai";
-import { TiPlus } from "react-icons/ti";
-import { TbTrekking } from "react-icons/tb";
-import { ImBasecamp } from "react-icons/im";
-import { TiMediaEjectOutline } from "react-icons/ti";
-import { TbHelpTriangleFilled } from "react-icons/tb";
-import { FaRoute } from "react-icons/fa";
+import { TiPlus } from "react-icons/ti";;
 import { LuSquareDashedBottomCode } from "react-icons/lu";
-import { FiSearch } from "react-icons/fi";
+import { TbMessage } from "react-icons/tb";
+import { RiBloggerLine } from "react-icons/ri";
+import { MdInfoOutline } from "react-icons/md";
+import { MdSunny } from "react-icons/md";
+import { IoMdMoon } from "react-icons/io";
 
 
-const Header = () => {
+const Header = ({ theme, toggleTheme }) => {
 
   const [activeLink, setActiveLink] = useState('/');
   const navigate = useNavigate();
+  const [scrolled, setScrolled] = useState(false);
 
-  const [showSearch, setShowSearch] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
 
+    window.addEventListener('scroll', handleScroll);
 
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-
-  const openSearch = () => setShowSearch(true);
-  const closeSearch = () => setShowSearch(false);
-
-
-  const handleNavigate = () =>{
+  const handleNavigate = () => {
     navigate('/')
   }
   const handleLinkClick = (path) => {
     setActiveLink(path);
   };
 
- 
+
+  const [scrollPercent, setScrollPercent] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const winHeight = document.body.scrollHeight - window.innerHeight;
+      const scrolled = (scrollTop / winHeight) * 100;
+      setScrollPercent(scrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const location = useLocation();
+
   return (
-    <header>
-      <div className="top_header flex items-center ">
-        <div className="left_section flex items-center">
-          <p><MdOutlinePhonelinkRing size={20} className='flex items-center' /> +918080987767</p>
-          <p><AiOutlineMail className='flex items-center' size={20} /> sbhosle011@gmail.com</p>
+    <header className="header">
+
+      <div className="logo flex items-center" onClick={handleNavigate}>
+        <div className="icon_bx">
+          <LuSquareDashedBottomCode size={50} />
         </div>
-        <div className="right_section flex items-center">
-          <Link><TbBrandFacebookFilled /></Link>
-          <Link><RiInstagramFill /></Link>
-          <Link><IoLogoWhatsapp /></Link>
-          <Link><FaTwitter /></Link>
+        <div className="logo_name">
+          <p>Code Stack</p>
+          <span>Web Developer</span>
         </div>
       </div>
-      <div className="main_nav flex items-center ">
-        <div className="logo flex items-center" onClick={handleNavigate}>
-          <div className="icon_bx">
-            <LuSquareDashedBottomCode size={40}/>
-          </div>
-          <div className="logo_name">
-            <p>Code Stack</p>
-            <span>Web Developer</span>
-          </div>
-        </div>
+      <div className="right_nav flex items-center">
+
         <nav className="navbar flex items-center">
           <li>
-          <Link to="/" className={activeLink === '/' ? 'active-link' : ''} onClick={() => handleLinkClick('/')}>
-              Home 
+            <Link to="/" className={activeLink === '/' ? 'active-link' : ''} onClick={() => handleLinkClick('/')}>
+              Home
             </Link>
           </li>
-           <li>
-           <Link to="/about" className={activeLink === '/about' ? 'active-link' : ''} onClick={() => handleLinkClick('/about')} >
-              Education 
+          <li>
+            <Link to="/education" className={activeLink === '/education' ? 'active-link' : ''} onClick={() => handleLinkClick('//education')} >
+              Education
             </Link>
-           </li>
-            <li>
-            <Link to="/products" className={activeLink === '/products' ? 'active-link' : ''} onClick={() => handleLinkClick('/products')}>
-              Skills 
+          </li>
+          <li>
+            <Link to="/skills" className={activeLink === '/skills' ? 'active-link' : ''} onClick={() => handleLinkClick('/skills')}>
+              Skills
             </Link>
-            </li>
-            <li>
-            <Link to="/products" className={activeLink === '/products' ? 'active-link' : ''} onClick={() => handleLinkClick('/products')}>
-              Projects 
+          </li>
+          <li>
+            <Link to="/projects" className={activeLink === '/projects' ? 'active-link' : ''} onClick={() => handleLinkClick('/projects')}>
+              Projects
             </Link>
-            </li>
-           <li>
-           <Link to="/contact" className={activeLink === '/contact' ? 'active-link' : ''} onClick={() => handleLinkClick('/contact')} >
-              More Links <TiPlus className='plus-icon'/>
+          </li>
+          <li>
+            <Link to="" className={activeLink === '' ? 'active-link' : ''} onClick={() => handleLinkClick('')} >
+              More Links <TiPlus className='plus-icon' />
             </Link>
             <div className="dropdown">
-            <Link className="item"><MdOutlinePhonelinkRing  size={22}/> Contact Us</Link>
-              <Link className="item"><TbHelpTriangleFilled size={22}/> Even Enquiry</Link>
-            </div>
-           </li>
-           <li>
-           <button className="open-search" onClick={openSearch}> <FiSearch size={25} /></button>
-           </li>
+              <Link to='/blogs' className="item"><RiBloggerLine size={22} /> Blogs</Link>
+              <Link to='/contact' className="item"><MdOutlinePhonelinkRing size={22} /> Contact Us</Link>
+              <Link to='/about' className="item"><MdInfoOutline size={22} /> About Us</Link>
 
-        
+            </div>
+          </li>
+
+
+
         </nav>
+
+        <div className="btn_connect">
+          
+          <button className="theme-toggle" onClick={toggleTheme}>
+            {theme === "light" ? <IoMdMoon size={25}/> : <MdSunny color='#ffd52c' size={25}/>}
+          </button>
+          <Link className='connect'><TbMessage size={22} /> Connect Me </Link>
+
+        </div>
       </div>
 
-        {showSearch && (
-        <div className="search-backdrop" onClick={closeSearch}>
-          <div className="modal-search" onClick={(e) => e.stopPropagation()}>
-            <h2>Hello 👋</h2>
-            <p>This is a smooth animated modal!</p>
-            <button className="close-btn" onClick={closeSearch}>Close</button>
-          </div>
-        </div>
-      )}
+      <div className="scroll-progress" style={{ width: `${scrollPercent}%` }}></div>
+
     </header>
   )
 }

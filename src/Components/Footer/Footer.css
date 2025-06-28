@@ -1,0 +1,129 @@
+.footer{
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 30px 3% 0px 3%;
+    background-color: var(--footer-bg);
+
+}
+
+.footer section {
+    width: 100%;
+    gap: 50px;
+
+}
+
+.footer section .left_footer{
+    width: 35%;
+
+}
+
+
+.footer section .logo{
+    gap: 10px;
+}
+.footer section  .logo .icon_bx {
+    color: var(--text-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .footer section  .logo .logo_name {
+    line-height: 26px;
+  }
+  
+  .footer section  .logo .logo_name p {
+    font-family: "Righteous", sans-serif;
+    font-size: 22px;
+    color: var(--text-color);
+  }
+  
+  .footer section .logo .logo_name span {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--text-color-2);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  
+.footer section .left_footer .desc{
+    color: var(--text-color-light);
+    margin: 10px 0px;
+}
+
+  .footer section .left_footer .menus a{
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--text-color-light);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.5s ease;
+}
+
+.footer section .left_footer .menus a:hover{
+    color: var(--text-color-2);
+}
+
+.footer section .left_footer .menus{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0px;
+}
+
+.footer section .footer_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.footer section .footer_grid .footer_card{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.footer .footer_grid .footer_card h2{
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.footer .footer_grid .footer_card .links a{
+    display: flex;
+    align-items: center;
+   text-decoration: none;
+   color: var(--text-color-light);
+   padding: 8px 0px;
+   font-size: 18px;
+   transition: 0.5s ease;
+   gap: 6px;
+}
+
+.footer .footer_grid .footer_card .links a:hover{
+    color: var(--text-color-2);
+}
+
+
+
+.footer .privacy_logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+    border-top: 1px solid var(--text-color-2);
+    margin-top: 15px;
+}
+
+.footer .privacy_logo p{
+    color: var(--text-color-light);
+}
