@@ -25,6 +25,7 @@
 }
 
 
+
 .header .logo {
   gap: 10px;
   cursor: pointer;
@@ -62,6 +63,8 @@
 
 .header .right_nav{
   gap: 30px;
+  height: auto;
+  position: relative;
 }
 
 .header .right_nav .btn_connect{
@@ -94,6 +97,7 @@
 .header .navbar {
   height: 100%;
   gap: 25px;
+  position: relative;
 }
 
 .navbar li {
@@ -112,10 +116,9 @@
   transition: 0.5s ease;
 }
 
-.header.scrolled .navbar li a {
-  color: var(--text-color);
+.navbar li a .nav_icon{
+  display: none;
 }
-
 .navbar li a:hover {
   color: var(--text-color-2);
 }
@@ -178,4 +181,78 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background-color: var(--text-color-2);
+  padding: 6px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Mobile Navbar Slide In (ONLY nav, not other buttons) */
+@media (max-width: 991px) {
+  .hamburger{
+    display:flex;
+    margin-left: 30px;
+ 
+    
+  }
+   .header .navbar {
+    position: fixed;
+    top: 0px;
+    left: -300px;
+    height: 100vh; 
+    width: 260px;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 99999;
+    transition: left 0.3s ease-in-out;
+    display: flex; 
+    box-shadow: rgba(0, 0, 0, 0.090) 0px 0px 20px 0px;
+    gap:0px;
+    border-right:3px solid var(--text-color-2);
+  }
+
+  .navbar.open {
+    left: 0;
+  }
+
+  .navbar li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar li a {
+    display: flex;
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-bottom: none;
+  }
+  .navbar li a .nav_icon{
+    display: flex;
+  }
+
+  .navbar li .dropdown {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .navbar li .dropdown .item {
+    padding: 8px 0;
+    font-size: 15px;
+    display: flex;
+  }
 }
