@@ -127,3 +127,15 @@
 .footer .privacy_logo p{
     color: var(--text-color-light);
 }
+
+
+@media(max-width:768px){
+    .footer section {
+       display: block;
+    
+    }
+    .footer section .left_footer{
+        width: 100%;
+    
+    }
+}

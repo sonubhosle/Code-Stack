@@ -106,7 +106,7 @@ const Header = ({ theme, toggleTheme }) => {
           <button className="theme-toggle" onClick={toggleTheme}>
             {theme === "light" ? <IoMdMoon size={25} /> : <MdSunny color='#ffd52c' size={25} />}
           </button>
-          <Link className='connect'><TbMessage size={22} /> Connect Me</Link>
+          <Link className='connect'><TbMessage size={22} /><p> Connect Me</p></Link>
 
           <div className="hamburger" onClick={() => setHamburgerOpen(!hamburgerOpen)}>
             {hamburgerOpen ? <IoMdClose size={30} /> : <GiHamburgerMenu size={30} />}

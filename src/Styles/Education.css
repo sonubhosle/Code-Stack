@@ -88,3 +88,11 @@
     gap: 6px;
   }
 }
+
+@media(max-width:576px){
+  .education-list {
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+}

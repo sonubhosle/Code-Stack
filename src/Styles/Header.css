@@ -256,3 +256,27 @@
     display: flex;
   }
 }
+
+@media(max-width:576px){
+  .header .right_nav .btn_connect a {
+     padding: 10px;
+
+  }
+  .header .right_nav .btn_connect a p{
+    display: none;
+
+  }
+}
+
+@media(max-width:450px){
+  .header .right_nav .btn_connect a {
+    display: none;
+
+  }
+  .hamburger{
+    display:flex;
+    margin-left: 10px;
+ 
+    
+  }
+}
