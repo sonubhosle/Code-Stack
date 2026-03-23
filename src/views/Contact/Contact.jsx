@@ -44,9 +44,9 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-gray-50 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] bg-emerald-200/30 rounded-full blur-[120px] mix-blend-multiply animate-pulse"></div>
-        <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-purple-200/30 rounded-full blur-[100px] mix-blend-multiply"></div>
-        <div className="absolute top-[40%] left-[30%] w-[400px] h-[400px] bg-pink-100/40 rounded-full blur-[80px] mix-blend-multiply opacity-70"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-200 h-200 bg-emerald-200/30 rounded-full blur-[120px] mix-blend-multiply animate-pulse"></div>
+        <div className="absolute bottom-[-10%] left-[-5%] w-150 h-150 bg-purple-200/30 rounded-full blur-[100px] mix-blend-multiply"></div>
+        <div className="absolute top-[40%] left-[30%] w-100 h-100 bg-pink-100/40 rounded-full blur-[80px] mix-blend-multiply opacity-70"></div>
       </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -76,7 +76,7 @@ const Contact = () => {
               {[
                 { icon: <Mail size={20} />, label: "Email Me", value: CONTACT_INFO.email, href: `mailto:${CONTACT_INFO.email}`, color: "emerald" },
                 { icon: <Phone size={24} />, label: "Call Me", value: CONTACT_INFO.phone, href: `tel:${CONTACT_INFO.phone}`, color: "purple" },
-                { icon: <MapPin size={24} />, label: "Location", value: "San Francisco, CA", color: "pink" }
+                { icon: <MapPin size={24} />, label: "Location", value: "Basmath, Maharashtra", color: "pink" }
               ].map((item, idx) => (
                 <ScrollReveal key={idx} delay={0.1 * idx} direction="right">
                   <a href={item.href || "#"} className={`group px-5 py-3 h-full bg-white rounded-xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-5`}>
